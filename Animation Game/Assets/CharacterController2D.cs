@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
+	//Alles wat hier staat is te zien en handmatig aanpasbaar in Unity
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
@@ -19,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	//Voegt in de Inspector een kopje Events toe.
 	[Header("Events")]
 	[Space]
 
@@ -78,32 +80,32 @@ public class CharacterController2D : MonoBehaviour
 		{
 
 			// If crouching
-			if (crouch)
-			{
-				if (!m_wasCrouching)
+				if (crouch)
 				{
-					m_wasCrouching = true;
-					OnCrouchEvent.Invoke(true);
-				}
+					if (!m_wasCrouching)
+					{
+						m_wasCrouching = true;
+						OnCrouchEvent.Invoke(true);
+					}
 
-				// Reduce the speed by the crouchSpeed multiplier
-				move *= m_CrouchSpeed;
+					// Reduce the speed by the crouchSpeed multiplier
+					move *= m_CrouchSpeed;
 
-				// Disable one of the colliders when crouching
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = false;
-			} else
-			{
-				// Enable the collider when not crouching
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = true;
-
-				if (m_wasCrouching)
+					// Disable one of the colliders when crouching
+					if (m_CrouchDisableCollider != null)
+						m_CrouchDisableCollider.enabled = false;
+				} else
 				{
-					m_wasCrouching = false;
-					OnCrouchEvent.Invoke(false);
+					// Enable the collider when not crouching
+					if (m_CrouchDisableCollider != null)
+						m_CrouchDisableCollider.enabled = true;
+
+					if (m_wasCrouching)
+					{
+						m_wasCrouching = false;
+						OnCrouchEvent.Invoke(false);
+					}
 				}
-			}
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -111,18 +113,19 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 			// If the input is moving the player right and the player is facing left...
-			if (move > 0 && !m_FacingRight)
-			{
-				// ... flip the player.
-				Flip();
-			}
-			// Otherwise if the input is moving the player left and the player is facing right...
-			else if (move < 0 && m_FacingRight)
-			{
-				// ... flip the player.
-				Flip();
-			}
+				if (move > 0 && !m_FacingRight)
+				{
+					// ... flip the player.
+					Flip();
+				}
+				// Otherwise if the input is moving the player left and the player is facing right...
+				else if (move < 0 && m_FacingRight)
+				{
+					// ... flip the player.
+					Flip();
+				}
 		}
+
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
