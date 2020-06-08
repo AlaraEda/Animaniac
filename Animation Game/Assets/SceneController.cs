@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //Wat je moet gebruiken als je wilt switchen tussen scenes.
 
-public class MainMenu : MonoBehaviour{
+public class SceneController : MonoBehaviour{
 
     public void PlayGame()
     {

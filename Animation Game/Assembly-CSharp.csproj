@@ -66,8 +66,8 @@
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\ExclamationController.cs" />
     <Compile Include="Assets\Interactable.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\SceneController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
