@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement; //Wat je moet gebruiken als je wilt switchen tussen scenes.
+using UnityEngine.SceneManagement;          //Wat je moet gebruiken als je wilt switchen tussen scenes.
 
 /*
  * Check 3 things:
@@ -16,12 +16,6 @@ public class Interactable : MonoBehaviour
     public bool isInRange;                  //Default = false
     public KeyCode interactKey;             //Default = None, het is de key die je indrukt om te interacten met het object.
     public UnityEvent interactAction;       //Zorgt ervoor dat je listeners kan toevoegen in Unity.
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -41,7 +35,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    //If Player is in range,    //Get's called when you STOP intercecting.
+    //If Player is in range, get's called when you STOP intercecting.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
