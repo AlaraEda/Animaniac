@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Er zijn geen animaties, waardoor de Exclamation Controller eigenlijk niet gebruikt word. 
-
 public class ExclamationController : MonoBehaviour
 {
     public bool isOpen;
