@@ -20,16 +20,6 @@ public class SceneController : MonoBehaviour{
         */
     }
 
-    public void DrawScreen()
-    {
-        SceneManager.LoadScene("Drawer");
-    }
-
-    public void DrawToLife()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     //Verander naam Menu() naar terug.
     public void Menu()
     {
