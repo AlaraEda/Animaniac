@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":932.39794921875,"y":330.6343688964844,"z":8.0},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":-1.0},"size":1748.54541015625,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":37.26987838745117,"y":-93.39930725097656,"z":20.40234375},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":-1.0},"size":20.748937606811525,"orthographic":true}
+>>>>>>> parent of 319d0f2... pause game
