@@ -66,6 +66,7 @@
     <Compile Include="Assets\CharacterController2D.cs" />
     <Compile Include="Assets\ExclamationController.cs" />
     <Compile Include="Assets\Interactable.cs" />
+    <Compile Include="Assets\NameTransfer.cs" />
     <Compile Include="Assets\PauseGame.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\SceneController.cs" />

@@ -27,9 +27,10 @@ public class Interactable : MonoBehaviour
             //And player presses the E-key
             if (Input.GetKeyDown(interactKey))
             {
-                Debug.Log("This works");
+                Debug.Log("Ga naar Draw-Screen");
                 //Fire Unity Event, ga naar andere scherm(?)
                 //interactAction.Invoke();    //Fire alle events die je hebt opgeslagen in Unity.
+
                 SceneManager.LoadScene("Drawer");
             }
         }
