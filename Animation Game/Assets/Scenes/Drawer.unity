@@ -184,7 +184,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1824811020}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 503842108}
   - component: {fileID: 503842107}
   m_Layer: 5
-  m_Name: Button
+  m_Name: EnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,7 +442,7 @@ RectTransform:
   m_Children:
   - {fileID: 1671497546}
   m_Father: {fileID: 1824811020}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -947,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245d6a1c159204aa1890f2d775fcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playername: {fileID: 1497975112}
 --- !u!1 &1671497545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,8 +1199,8 @@ RectTransform:
   - {fileID: 383169474}
   - {fileID: 1613590479}
   - {fileID: 1497975111}
-  - {fileID: 345548148}
   - {fileID: 503842106}
+  - {fileID: 345548148}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

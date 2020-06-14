@@ -7,12 +7,15 @@ public class PlayerMovement : MonoBehaviour
 
     //De Variabele is gevuld in Unity, elke keer dat we "controller" typen roepen we de Character Controller 2D(Script) aan.
     public CharacterController2D controller;
+    public Animator animator;
 
     public float runSpeed = 80f;        //Default value = 40
 
     float horizontalMove = 0f;          //Default value = 0
     bool jump = false;
     bool crouch = false;
+
+     
 
     // Update is called once per frame
     //Get input from our Player
@@ -25,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
         
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;             //Horizontal move is or -40 or 40
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));                  //Speciaal voor Loop animatie
         
         if (Input.GetButtonDown("Jump")){
             jump = true;                                                        //Jump is een button die in je "project settings" staat
+            animator.SetBool("IsJumping", true);                                //Jump animatie
         }
 
         if (Input.GetButtonDown("Crouch")){
@@ -35,6 +40,18 @@ public class PlayerMovement : MonoBehaviour
         }else if (Input.GetButtonUp("Crouch")){
             crouch = false;
         }
+    }
+
+    //Function that tells player when to stop the jumping animation
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+
+    //Function that tells player to start crouching.
+    public void OnCrouching (bool isCrouching)
+    {
+        animator.SetBool("IsCrouching", isCrouching);
     }
 
     //Function that is dedicated for physics. 

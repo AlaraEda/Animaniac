@@ -9729,7 +9729,7 @@ Tilemap:
     second:
       m_TileIndex: 9
       m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
@@ -9790,7 +9790,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0fc8565c24c3a0d45b72990f15151ed6, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 988
+  - m_RefCount: 987
     m_Data:
       e00: 1
       e01: 0
@@ -9800,6 +9800,24 @@ Tilemap:
       e11: 1
       e12: 0
       e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - m_RefCount: 1
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1
       e20: 0
       e21: 0
       e22: 1
@@ -9901,7 +9919,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.045677, y: 4.889786}
+  m_Offset: {x: 10.998377, y: 3.9753227}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9912,7 +9930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1310272, y: 1.8582382}
+  m_Size: {x: 2.0364265, y: 2.0474472}
   m_EdgeRadius: 0
 --- !u!61 &162211100
 BoxCollider2D:
@@ -13244,6 +13262,7 @@ GameObject:
   - component: {fileID: 856440522}
   - component: {fileID: 856440521}
   - component: {fileID: 856440523}
+  - component: {fileID: 856440524}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13293,15 +13312,38 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_GroundCheck: {fileID: 2120113747}
   m_CeilingCheck: {fileID: 1738949514}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 856440522}
+  playername: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 856440523}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnCrouchEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 856440523}
+        m_MethodName: OnCrouching
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &856440519
@@ -13381,9 +13423,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08}
+  m_Offset: {x: -0.012330151, y: -0.11194225}
   serializedVersion: 2
-  m_Radius: 0.07451774
+  m_Radius: 0.054905653
 --- !u!61 &856440522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13423,7 +13465,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 856440518}
+  animator: {fileID: 856440524}
   runSpeed: 80
+--- !u!95 &856440524
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856440516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 419450b4df744374ba51e09520c90c91, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &885210279
 GameObject:
   m_ObjectHideFlags: 0
@@ -16913,7 +16975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745902817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17036,6 +17098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245d6a1c159204aa1890f2d775fcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playername: {fileID: 0}
 --- !u!1 &1751642282
 GameObject:
   m_ObjectHideFlags: 0
@@ -17835,7 +17898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1973560733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17958,6 +18021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245d6a1c159204aa1890f2d775fcdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playername: {fileID: 0}
 --- !u!1 &1978102562
 GameObject:
   m_ObjectHideFlags: 0

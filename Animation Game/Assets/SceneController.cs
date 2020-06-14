@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //Wat je moet gebruiken als je wilt switchen tussen scenes.
+using UnityEngine.SceneManagement;    //Wat je moet gebruiken als je wilt switchen tussen scenes.
+using UnityEngine.UI;                 //Wat je nodig hebt voor het gebruiken van een InputField.
+
 
 public class SceneController : MonoBehaviour{
 
+    public InputField playername;
+
     public void PlayGame()
     {
+        //Pas information - Player name to gameScreen;
+        Debug.Log("Player Name is:"+ playername.text);
+
         //Ga direct naar de Main/Game
         SceneManager.LoadScene("Main");
 
