@@ -19,12 +19,17 @@ https://www.youtube.com/watch?v=BpuvYWhXVKo&feature=emb_title
 <br><br>
 
 ### Photos
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-<br><br>
+<img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Afbeelding1.png" width="450"/>
+
+<img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Afbeelding3.png" width="200"/>  |  <img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Afbeelding2.png" width="200"/>
+:-------------------------:|:-------------------------:
+<img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Afbeelding4.png" width="200"/>            |  <img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Afbeelding5.png" width="200"/>
+
+<br>
+<img src="https://github.com/AlaraEdda/Animaniac/blob/master/src/Pic3.png" width="450"/>
+<br>
 
 ---
-
 <p align="right"> 
 "Creativity is intelligence having fun." - Albert Einstein
 </p> 
